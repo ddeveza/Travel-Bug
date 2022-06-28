@@ -7,10 +7,10 @@ class Post(models.Model):
         db_table = 'post'
 
     name = models.CharField(
-        'Name', blank=False, null=False, max_length=50, db_index=True, default='Anonymous'
+        'Name', blank=False, null=False, max_length=14, db_index=True, default='Anonymous'
     )
-    body = models.TextField(
-        'Body', blank=False, null=False, db_index=True
+    body = models.CharField(
+        'Body', blank=False, null=False, max_length=140, db_index=True
     )
     image = CloudinaryField(
         'image', blank=True, null=True

@@ -1,8 +1,10 @@
+from tkinter.tix import Tree
 from django.db import models
 from cloudinary.models import CloudinaryField
 from apps.categories.models import Category
 
 # Create your models here.
+
 class Place(models.Model):
     MY_CHOICES = (
         ('Private and Luxury', 'Private and Luxury'),
@@ -22,7 +24,9 @@ class Place(models.Model):
     description = models.CharField(
         'Description', max_length=500, db_index=True, null=False, blank=False
     )
-
+    detailed_description = models.CharField (
+        'Detailed Description',max_length=10000,db_index=True,null=False,blank=False
+    )
     image = CloudinaryField(
         'Image', blank=False
     )

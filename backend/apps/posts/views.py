@@ -1,9 +1,12 @@
 from rest_framework import generics
 from .serializers import PostSerializer
+from django.http import JsonResponse
 from .models import Post
 
+
 class PostList(generics.ListAPIView):
-    queryset = Post.objects.order_by('-created_at').all()
+    # Get all posts, limit = 20
+    queryset = Post.objects.order_by('created_at').reverse().all()[:20]
     serializer_class = PostSerializer
 
 

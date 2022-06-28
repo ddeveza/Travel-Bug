@@ -12,6 +12,9 @@ class Category(models.Model):
     image = CloudinaryField(
         'Image', null=False, blank=True
     )
+    description = models.CharField(
+        "Description",blank=False,null=False,max_length=10000
+    )
 
     def __str__(self):
         return self.name

@@ -4,8 +4,6 @@ from django.http import JsonResponse
 from .models import Place
 from django_filters.rest_framework import DjangoFilterBackend
 
-# Create your views here.
-
 class PlaceList(generics.ListAPIView):
     # Get all places, limit = 20
     queryset = Place.objects.all()
@@ -13,3 +11,4 @@ class PlaceList(generics.ListAPIView):
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     filterset_fields = ['category']
     search_fields = ['name', 'description']
+
