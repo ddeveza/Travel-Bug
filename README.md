@@ -28,7 +28,7 @@ Check out [API LIVE DEMO](https://travel-bug-backend-gd.herokuapp.com/) here!!
 1. Git Clone
 
 ```
-git clone git@github.com:Tech-i-s/techis-wd-forum-django-react.git
+git clone https://github.com/Travel-Bug-techis/Travel-Bug.git
 ```
 
 2. Backend setting
